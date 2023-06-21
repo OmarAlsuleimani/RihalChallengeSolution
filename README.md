@@ -1,7 +1,6 @@
-# My Todo
+# Rihal Challenge Solution
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+This project is the solution to Rihal's web app challenge created by Omar Al-Suleimani. It satisfies all of the mandotory requirements, and 6 out of 7 bonus requirements.
 
 ## Running the application
 
