@@ -1,6 +1,18 @@
 # Rihal Challenge Solution
 
-This project is the solution to Rihal's web app challenge created by Omar Al-Suleimani. It satisfies all of the mandotory requirements, and 6 out of 7 bonus requirements.
+This project is the solution to Rihal's web app challenge created by Omar Al-Suleimani. It satisfies all of the mandotory requirements, and 6 out of 7 bonus requirements, the missing one being the "Generate random seed data" requirement. 
+
+## Project Description:
+- The web app contains 3 pages, the main page: Students, and two other pages: Classes and Countries.
+- Each page allows the user to perform CRUD operations on the respective tables.
+- The "Add" button of each page allows the user to perform the Create operation.
+- Navigating to a page automatically performs the Read operation as entries are loaded to the respective table.
+- Clicking on an entry in the table allows the user to perform the Update and Delete operations for that entry.
+- Deleting a class or a country would result in the deletion of all students registered to the class or the country.
+- Similarly, updating the ID of a class or a country would update the respective field for every student registered to that class or country.
+- IDs for all tables are generated automatically, and CreatedDate and ModifiedDate properties are created\updated automatically whenever needed. Similarly, calculations like the average age of all students and the count of students per class and country are performed automatically whenever a change is made to the database.
+- The average age of students is displayed on the Students page, and the count of students per class and country are displayed for each entry in their respective table.
+- The 3rd party UI library used is Vaadin. Details of Vaadin can be found in the next section.
 
 ## Running the application
 
@@ -26,19 +38,6 @@ Once the JAR file is built, you can run it using
 - `MainLayout.java` in `src/main/java` contains the navigation setup (i.e., the
   side/top bar and the main menu). This setup uses
   [App Layout](https://vaadin.com/docs/components/app-layout).
-- `views` package in `src/main/java` contains the server-side Java views of your application.
-- `views` folder in `frontend/` contains the client-side JavaScript views of your application.
+- `views` package in `src/main/java` contains the server-side Java views of the application.
+- `views` folder in `frontend/` contains the client-side JavaScript views of the application.
 - `themes` folder in `frontend/` contains the custom CSS styles.
-
-## Useful links
-
-- Read the documentation at [vaadin.com/docs](https://vaadin.com/docs).
-- Follow the tutorial at [vaadin.com/docs/latest/tutorial/overview](https://vaadin.com/docs/latest/tutorial/overview).
-- Create new projects at [start.vaadin.com](https://start.vaadin.com/).
-- Search UI components and their usage examples at [vaadin.com/docs/latest/components](https://vaadin.com/docs/latest/components).
-- View use case applications that demonstrate Vaadin capabilities at [vaadin.com/examples-and-demos](https://vaadin.com/examples-and-demos).
-- Build any UI without custom CSS by discovering Vaadin's set of [CSS utility classes](https://vaadin.com/docs/styling/lumo/utility-classes). 
-- Find a collection of solutions to common use cases at [cookbook.vaadin.com](https://cookbook.vaadin.com/).
-- Find add-ons at [vaadin.com/directory](https://vaadin.com/directory).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/vaadin) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
-- Report issues, create pull requests in [GitHub](https://github.com/vaadin).
