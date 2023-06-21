@@ -12,7 +12,7 @@ This project is the solution to Rihal's web app challenge created by Omar Al-Sul
 - Similarly, updating the ID of a class or a country would update the respective field for every student registered to that class or country.
 - IDs for all tables are generated automatically, and CreatedDate and ModifiedDate properties are created\updated automatically whenever needed. Similarly, calculations like the average age of all students and the count of students per class and country are performed automatically whenever a change is made to the database.
 - The average age of students is displayed on the Students page, and the count of students per class and country are displayed for each entry in their respective table.
-- The 3rd party UI library used is Vaadin. Details of Vaadin can be found in the next section.
+- The 3rd party UI library used is Vaadin.
 
 ## Running the application
 
