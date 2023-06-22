@@ -1,0 +1,16 @@
+a[highlight] {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+:host-context([theme="light"]) {
+  --primary-color: #007bff;
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+:host-context([theme="dark"]) {
+  --primary-color: #00aaff;
+  --background-color: #222222;
+  --text-color: #ffffff;
+}
