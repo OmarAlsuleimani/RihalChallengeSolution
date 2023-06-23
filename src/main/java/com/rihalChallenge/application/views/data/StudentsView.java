@@ -22,12 +22,17 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.data.value.ValueChangeMode;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
+import jakarta.annotation.security.PermitAll;
+import org.springframework.context.annotation.Scope;
 
 import java.util.LinkedList;
 import java.util.List;
 
+@org.springframework.stereotype.Component
+@Scope("prototype")
 @PageTitle("Rihal Challenge | Omar Al-Suleimani")
 @Route(value = "", layout = MainLayout.class)
+@PermitAll
 public class StudentsView extends VerticalLayout {
     private Grid<Student> grid = new Grid<>(Student.class);
     private TextField filter = new TextField();
@@ -39,6 +44,7 @@ public class StudentsView extends VerticalLayout {
     private TextField tfBirthDate = new TextField("Date of birth (yyyy-mm-dd)");
     private Text countText = new Text("");
     private Text ageText = new Text("");
+    private Button addStudentButton = new Button("Add Student");
     private StudentsDatabaseController sqlite;
     private Student student;
 
@@ -206,7 +212,6 @@ public class StudentsView extends VerticalLayout {
         filter.setClearButtonVisible(true);
         filter.setValueChangeMode(ValueChangeMode.LAZY);
         filter.addValueChangeListener(e -> updateList());
-        Button addStudentButton = new Button("Add Student");
         addStudentButton.addClickListener(e -> addStudent());
         HorizontalLayout toolbar = new HorizontalLayout(filter, addStudentButton);
         toolbar.setClassName("toolbar");
@@ -262,5 +267,49 @@ public class StudentsView extends VerticalLayout {
             tfBirthDate.setValue(student.getBirthDate());
             form.setVisible(true);
         }
+    }
+
+    public Grid<Student> getGrid() {
+        return grid;
+    }
+
+    public TextField getFilter() {
+        return filter;
+    }
+
+    public FormLayout getForm() {
+        return form;
+    }
+
+    public TextField getTfId() {
+        return tfId;
+    }
+
+    public TextField getTfName() {
+        return tfName;
+    }
+
+    public ComboBox<Class> getCbClass() {
+        return cbClass;
+    }
+
+    public ComboBox<Country> getCbCountry() {
+        return cbCountry;
+    }
+
+    public TextField getTfBirthDate() {
+        return tfBirthDate;
+    }
+
+    public Text getCountText() {
+        return countText;
+    }
+
+    public Text getAgeText() {
+        return ageText;
+    }
+
+    public Button getAddStudentButton() {
+        return addStudentButton;
     }
 }
