@@ -1,6 +1,6 @@
 # Rihal Challenge Solution
 
-This project is the solution to Rihal's web app challenge created by Omar Al-Suleimani. It satisfies all of the mandotory requirements, and 6 out of 7 bonus requirements, the missing one being the "Generate random seed data" requirement. 
+This project is the solution to Rihal's web app challenge created by Omar Al-Suleimani. It satisfies all of the mandotory requirements, and 5 out of 7 bonus requirements, the missing one being the "Generate random seed data", and "Host the app as a website and share link." requirements. 
 
 ## Project Description:
 - The web app contains 3 pages, the main page: Students, and two other pages: Classes and Countries.
